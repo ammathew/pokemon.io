@@ -1,0 +1,65 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Pokemon API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/pokemon": {
+        "post": {
+          "summary": "Create a new Pokemon",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Name": { "type": "string" },
+                    "Type 1": { "type": "string" },
+                    "Type 2": { "type": "string" },
+                    "Total": { "type": "integer" },
+                    "HP": { "type": "integer" },
+                    "Attack": { "type": "integer" },
+                    "Defense": { "type": "integer" },
+                    "Sp. Atk": { "type": "integer" },
+                    "Sp. Def": { "type": "integer" },
+                    "Speed": { "type": "integer" },
+                    "Generation": { "type": "integer" },
+                    "Legendary": { "type": "boolean" }
+                  }
+                }
+              }
+            },
+          "responses": {
+            "201": {
+              "description": "The created Pokemon",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "#": { "type": "integer" },
+                      "Name": { "type": "string" },
+                      "Type 1": { "type": "string" },
+                      "Type 2": { "type": "string" },
+                      "Total": { "type": "integer" },
+                      "HP": { "type": "integer" },
+                      "Attack": { "type": "integer" },
+                      "Defense": { "type": "integer" },
+                      "Sp. Atk": { "type": "integer" },
+                      "Sp. Def": { "type": "integer" },
+                      "Speed": { "type": "integer" },
+                      "Generation": { "type": "integer" },
+                      "Legendary": { "type": "boolean" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
